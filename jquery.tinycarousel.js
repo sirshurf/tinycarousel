@@ -137,16 +137,16 @@
 
        function initialize () {
 	if (bAxis){
-		iPageSize = $(oPages[0]).outerWidth(true);
+		iPageSize = $(oPages[0]).outerWidth(true)+1;
 		$(oPages).each(function() {
 		    if ($(this).outerWidth(true) > iPageSize)
-			iPageSize = $(this).outerWidth(true);
+			iPageSize = $(this).outerWidth(true)+1;
 		});
 	} else {
-		iPageSize = $(oPages[0]).outerHeight(true);
+		iPageSize = $(oPages[0]).outerHeight(true)+1;
 		$(oPages).each(function() {
 		    if ($(this).outerHeight(true) > iPageSize)
-			iPageSize = $(this).outerHeight(true);
+			iPageSize = $(this).outerHeight(true)+1;
 		});
 
 	}
